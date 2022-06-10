@@ -13,8 +13,8 @@
 import { animate, easeInOut } from "popmotion";
 
 const size = {
-  width: 30,
-  height: 50,
+  width: 56,
+  height: 72,
 };
 
 export default {
@@ -36,7 +36,7 @@ export default {
   },
   created() {
     const nums = [];
-    for (let i = this.num; i < 31; i += 1) {
+    for (let i = this.num; i < 61; i += 1) {
       nums.push(i % 10);
     }
 
@@ -65,11 +65,10 @@ export default {
 <style scoped>
 .Panels {
   position: relative;
-  width: 30px;
-  height: 50px;
-  border: solid 1px #333;
+  width: 56px;
+  height: 72px;
   background-color: #fff;
-  border-radius: 4px;
+  border-radius: 6px;
   overflow: hidden;
 }
 .Panels__List {
@@ -82,16 +81,17 @@ export default {
 }
 .Panels__Num {
   position: relative;
-  width: 30px;
-  height: 50px;
+  width: 56px;
+  height: 72px;
 }
 .Panels__Num p {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 40px;
+  font-size: 60px;
   margin: 0;
   padding: 0;
+  color: #a6d3ed;
 }
 </style>
