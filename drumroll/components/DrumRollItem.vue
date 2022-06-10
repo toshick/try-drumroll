@@ -89,9 +89,24 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 60px;
+  font-size: 70px;
   margin: 0;
   padding: 0;
-  color: #a6d3ed;
+  background: linear-gradient(
+      27.92deg,
+      #97e2fe 20.55%,
+      #9ca0ff 41.24%,
+      #ff9eb0 60.97%,
+      #ffed8c 81.66%
+    ),
+    linear-gradient(
+      48.83deg,
+      #97e2fe 15.55%,
+      #9ca0ff 50.7%,
+      #fe94c7 70.72%,
+      #ffcd82 88.11%
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 </style>
