@@ -1,10 +1,26 @@
 <template>
   <article class="DrumRoll">
-    <DrumRollItem class="DrumRoll__Item" :num="2" :index="1" />
+    <DrumRollItem ref="drum1" class="DrumRoll__Item" :num="2" :index="1" />
     <p class="DrumRoll__Dot">.</p>
-    <DrumRollItem :num="8" :index="2" />
+    <DrumRollItem ref="drum2" :num="8" :index="2" />
   </article>
 </template>
+
+<script lang="ts">
+export default {
+  methods: {
+    startRoll() {
+      this.$refs.drum1.reset();
+      this.$refs.drum2.reset();
+      setTimeout(() => {
+        this.$refs.drum1.start();
+        this.$refs.drum2.start();
+      }, 100);
+    },
+  },
+};
+</script>
+
 <style scoped>
 .DrumRoll {
   display: flex;

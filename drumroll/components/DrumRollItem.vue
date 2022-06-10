@@ -32,6 +32,7 @@ export default {
     return {
       panelNums: [],
       pos: "100%",
+      resetPos: 0,
     };
   },
   created() {
@@ -43,10 +44,15 @@ export default {
     this.panelNums = nums;
   },
   mounted() {
-    this.startRoll();
+    this.resetPos = -size.height * (this.panelNums.length - 1);
+    this.reset();
+    this.start();
   },
   methods: {
-    startRoll() {
+    reset() {
+      this.pos = `${this.resetPos}px`;
+    },
+    start() {
       animate({
         from: -size.height * (this.panelNums.length - 1),
         to: 0,

@@ -3,7 +3,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "rm -rf ../docs/* && nuxt generate && cp -r dist/* ../docs/",
     "preview": "nuxt preview"
   },
   "devDependencies": {

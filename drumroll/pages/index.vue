@@ -1,11 +1,25 @@
 <template>
   <main>
-    <h1>Index page</h1>
+    <h1>
+      DrumRoll
+      <button class="btn-start" @click="startRoll">start</button>
+    </h1>
     <section>
-      <DrumRoll></DrumRoll>
+      <DrumRoll ref="droll"></DrumRoll>
     </section>
   </main>
 </template>
+
+<script lang="ts">
+export default {
+  methods: {
+    startRoll() {
+      this.$refs.droll.startRoll();
+    },
+  },
+};
+</script>
+
 <style scoped>
 main {
   width: 300px;
@@ -27,5 +41,8 @@ section {
   display: flex;
   align-items: flex-end;
   margin: 30px;
+}
+.btn-start {
+  margin-left: 20px;
 }
 </style>
